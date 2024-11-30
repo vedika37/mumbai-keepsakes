@@ -41,7 +41,7 @@ const MapPage = () => {
 
       const token = process.env.IMGUR_ACCESS_TOKEN;
       if (!token) {
-        console.error('Imgur access token is not set');
+        console.error('Imgur API error');
         return;
      }
       const imageInput = document.getElementById('imageInput') as HTMLInputElement | null;
