@@ -39,7 +39,7 @@ const MapPage = () => {
   
     try {
 
-      const token = process.env.NEXT_PUBLIC_IMGUR_ACCESS_TOKEN;
+      const token = process.env.IMGUR_ACCESS_TOKEN;
       if (!token) {
         console.error('Imgur access token is not set');
         return;
