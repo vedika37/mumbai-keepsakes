@@ -22,8 +22,8 @@ const MapPage = () => {
       const L = require('leaflet');
       mapRef.current = L.map('map').setView(mumbaiCoords, 12);
 
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors',
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CartoDB</a>',
       }).addTo(mapRef.current);
 
       mapRef.current.on('click', (e: any) => {
@@ -119,7 +119,6 @@ const MapPage = () => {
 
   return (
     <div className="map-container">
-      <h1>Map of Mumbai</h1>
       <div id="map" style={{ height: '500px', width: '100%' }}></div>
 
       {showModal && (
